@@ -1,0 +1,23 @@
+package layout
+
+import "awesome/view/component"
+
+templ Base() {
+  <html>
+    <head>
+      <title>Awesome</title>
+      <script src="https://unpkg.com/htmx.org@1.9.10"></script>
+      <script src="//unpkg.com/alpinejs" defer></script>
+
+      <link rel="preconnect" href="https://fonts.googleapis.com" />
+      <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+      <link href="https://fonts.googleapis.com/css2?family=Space+Grotesk:wght@300;400;600;700&display=swap" rel="stylesheet" />
+
+      <link rel="stylesheet" type="text/css" href="/static/css/style.css" />
+    </head>
+    <body>
+      @component.Header()
+      { children... }
+    </body>
+  </html>
+}

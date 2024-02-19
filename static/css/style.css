@@ -1,0 +1,184 @@
+:root {
+  --font-family: 'Space Grotesk', sans-serif;
+  --font-size: 18px;
+  --margin-xs: 8px;
+  --margin-sm: 15px;
+  --margin: 30px;
+  --margin-lg: 60px;
+  --margin-xl: 90px;
+  --radius: 6px;
+  --radius-lg: 12px;
+  --color: #333;
+  --content-width: 768px;
+}
+
+* {
+  box-sizing: border-box;
+}
+
+ul {
+  margin: 0;
+  padding: 0;
+  list-style-type: none;
+}
+
+body {
+  margin: 0;
+  font-family: var(--font-family);
+  font-size: var(--font-size);
+}
+
+.btn {
+  display: inline-block;
+  border: 0;
+  background-color: #333;
+  border-radius: var(--radius);
+  height: 48px;
+  line-height: 48px;
+  padding: 0 var(--margin);
+  color: #fff;
+  font-weight: 600;
+  transition: all .25s;
+  text-decoration: none;
+  outline: none;
+  cursor: pointer;
+}
+
+.btn:hover {
+  background-color: #111;
+}
+
+.btn svg {
+  width: 24px;
+  height: 24px;
+  fill: #FFF;
+}
+
+.btn.lt {
+  background: #EEE;
+  height: 40px;
+  width: 40px;
+  padding: 0;
+}
+
+.btn.lt svg {
+  width: 18px;
+  height: 18px;
+  fill: #444;
+}
+
+.home {
+  display: flex;
+}
+
+.home .land {
+  flex: 1.5;
+  height: 100vh;
+  background: url("/static/img/hero.jpg");
+  background-size: cover;
+  border-radius: 0 var(--radius-lg);
+}
+
+.home .data {
+  flex: 2;
+  min-height: 100vh;
+  padding: var(--margin-lg);
+}
+
+.home h1 {
+  font-weight: 700;
+  font-size: 3em;
+  letter-spacing: -4px;
+}
+
+.home ul {
+  max-width: 600px;
+}
+
+.home li {
+  margin: var(--margin) 0;
+}
+
+.home h3 {
+  margin: 0 0 var(--margin-sm);
+  line-height: 1em;
+}
+
+.home h3 a {
+  text-decoration: none;
+  color: var(--color);
+}
+
+.home h3 a:hover {
+  text-decoration: underline;
+}
+
+.home p {
+  margin: 0;
+  font-size: 1em;
+}
+
+header.main {
+  width: 90%;
+  margin: 0 auto;
+  display: flex;
+  padding: var(--margin-sm) 0;
+  align-items: center;
+}
+
+header.main h3 {
+  margin: 0;
+}
+
+header.main h3 a {
+  color: var(--color);
+  text-decoration: none;
+}
+
+header.main nav {
+  margin-left: auto;
+}
+
+.article {
+  width: 600px;
+   margin: 0 auto;
+}
+
+.write {
+  width: 600px;
+  display: flex;
+  flex-direction: column;
+  margin: 0 auto;
+}
+
+.write label {
+  font-size: .9em;
+  font-weight: bold;
+}
+
+input,
+textarea {
+  border-radius: var(--radius);
+  border: 1px solid #bbb;
+  margin: 0 0 var(--margin);
+  min-height: 40px;
+  font-family: var(--font-family);
+  padding: 0 var(--margin-sm);
+  font-size: 17px;
+}
+textarea {
+  padding: var(--margin-sm);
+}
+
+.comment-pop {
+  border: 1px solid #DDD;
+  box-shadow: 2px 3px 3px rgba(0,0,0,.1);
+  border-radius: var(--radius-lg);
+  padding: var(--margin);
+  width: 300px;
+}
+
+.comment-pop form {
+  display: flex;
+  flex-direction: column;
+}

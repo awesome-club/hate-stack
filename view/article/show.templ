@@ -1,0 +1,31 @@
+package article
+
+import "awesome/model"
+import "awesome/view/component"
+
+import ("awesome/view/layout")
+
+templ Show(article model.Article) {
+  @layout.Base() {
+    <div class="article">
+      <h1>{article.Title}</h1>
+      <p>{article.Body}</p>
+      <footer x-data="{ comment: false, love: false }">
+        <button x-on:click="comment = !comment">
+            @component.CommentIcon()
+        </button>
+        <button x-show="!love" x-on:click="love = true"
+            hx-post={"/article/" + article.Id + "/love"}>
+            @component.LoveIcon()
+        </button>
+        <section class="comment-pop" x-show="comment" x-transition>
+          @component.CommentForm(component.CommentFormProps{
+            ArticleId: article.Id,
+          })
+        </section>
+      </footer>
+    </div>
+  }
+}
+
+

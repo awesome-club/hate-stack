@@ -1,0 +1,14 @@
+package component
+
+type CommentFormProps struct {
+  ArticleId string
+}
+
+templ CommentForm(props CommentFormProps) {
+  <form hx-post="/comments">
+    <input type="hidden" name="articleId" value={props.ArticleId} />
+    <label>Your comment:</label>
+    <textarea required name="comment" />
+    <button class="btn" type="submit">Post</button>
+  </form>
+}

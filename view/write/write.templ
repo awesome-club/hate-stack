@@ -1,0 +1,15 @@
+package write
+
+import "awesome/view/layout"
+
+templ ShowWrite() {
+  @layout.Base() {
+    <form class="write" hx-post="/articles">
+      <label>Title:</label>
+      <input type="text" name="title" />
+      <label>Article:</label>
+      <textarea required name="body" />
+      <button type="submit" class="btn">Post Article</button>
+    </form>
+  }
+}

@@ -1,0 +1,25 @@
+package home
+
+import "awesome/view/layout"
+import "awesome/model"
+
+templ ShowHome(articles []model.Article) {
+  @layout.Base() {
+   <div class="home">
+    <div class="land"> </div>
+    <div class="data">
+        <h1>Micro Awesome</h1>
+        <ul>
+            for _, a := range articles {
+                <li>
+                    <h3>
+                        <a href={templ.URL("/articles/" + a.Id)}>{a.Title}</a>
+                    </h3>
+                    <p>{a.Body}</p>
+                </li>
+            }
+        </ul>
+    </div>
+   </div>
+  }
+}
